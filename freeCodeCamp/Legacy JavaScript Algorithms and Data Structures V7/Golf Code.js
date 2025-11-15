@@ -18,26 +18,29 @@ const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey"
 
 function golfScore(par, strokes) {
   // Only change code below this line
+
+  // let diff = strokes - par
+
   switch(true){
     case(strokes === 1):
       return names[0];
       break;
-    case(strokes <= par - 2):
+    case(strokes <= par - 2): // diff <= -2
       return names[1];
       break;
-    case(strokes === par -1):
+    case(strokes === par -1): // diff === -1
       return names[2];
       break;
-    case(strokes === par):
+    case(strokes === par):    // diff === 0
       return names[3];
       break;
-    case(strokes === par + 1):
+    case(strokes === par + 1): // diff === 1
       return names[4];
       break;
-    case(strokes === par + 2):
+    case(strokes === par + 2): // diff === 2
       return names[5];
       break;
-    case(strokes >= par + 3):
+    case(strokes >= par + 3): // default: return names[6]
       return names[6];
       break;
   }
