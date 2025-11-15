@@ -14,3 +14,36 @@ par + 2	              "Double Bogey"
 par and strokes will always be numeric and positive. We have added an array of all the names for your convenience.
 */
 
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+  switch(true){
+    case(strokes === 1):
+      return names[0];
+      break;
+    case(strokes <= par - 2):
+      return names[1];
+      break;
+    case(strokes === par -1):
+      return names[2];
+      break;
+    case(strokes === par):
+      return names[3];
+      break;
+    case(strokes === par + 1):
+      return names[4];
+      break;
+    case(strokes === par + 2):
+      return names[5];
+      break;
+    case(strokes >= par + 3):
+      return names[6];
+      break;
+  }
+
+  return "Change Me";
+  // Only change code above this line
+}
+
+golfScore(5, 3);
