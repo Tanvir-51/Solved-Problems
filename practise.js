@@ -1,21 +1,3 @@
-// class Book {
-//   constructor(author) {
-//     this._author = author;
-//   }
-//   // getter
-//   get writer() {
-//     return this._author;
-//   }
-//   // setter
-//   set writer(updatedAuthor) {
-//     this._author = updatedAuthor;
-//   }
-// }
-// const novel = new Book('anonymous');
-// console.log(novel.writer);
-// novel.writer = 'newAuthor';
-// console.log(novel.writer);
-
 class Person{
   constructor(name, year_born){
     this.name = name;
@@ -47,9 +29,10 @@ class Juggler extends Person{
 
 var you = new Juggler("Masud", 1997);
 
-// me.what();
-// you.what();
+me.what();
+you.what();
 
+//----------------------------------------------------------------------
 
 class Thermostat{
   constructor(fahrenheit){
