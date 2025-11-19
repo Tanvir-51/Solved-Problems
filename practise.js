@@ -60,13 +60,13 @@ class Thermostat{
     return (this._fahrenheit - 32) * 5/9;
   }
 
-  // set temperature(celsius){
-  //    this._fahrenheit = (9/5 * celsius) + 32;
-  // }
+  set temperature(celsius){
+     this._fahrenheit = (9/5 * celsius) + 32;
+  }
 
-  // get fahrenheit(){
-  //   return this._fahrenheit; 
-  // }
+  get fahrenheit(){
+    return this._fahrenheit; 
+  }
 }
 
 let thermos = new Thermostat(76);
@@ -75,4 +75,4 @@ console.log(thermos.temperature);
 thermos.temperature = 26;
 console.log(thermos.temperature);
 
-// console.log(thermos.fahrenheit);
+console.log(thermos.fahrenheit);
