@@ -1,61 +1,80 @@
-class Person{
-  constructor(name, year_born){
-    this.name = name;
-    this.year_born = year_born;
-  }
+// class Person{
+//   constructor(name, year_born){
+//     this.name = name;
+//     this.year_born = year_born;
+//   }
 
-  what(){
-    console.log(this.name + " is a person.");
-  }
+//   what(){
+//     console.log(this.name + " is a person.");
+//   }
 
-  static arms(){
-    return 2;
-  }
-}
+//   static arms(){
+//     return 2;
+//   }
+// }
 
-var me = new Person("Tanvir", 1998);
-// console.log(me.name + " was born in " + me.year_born + "!") ;
-// console.log(`${me.name} was born in ${me.year_born}`);
+// var me = new Person("Tanvir", 1998);
+// // console.log(me.name + " was born in " + me.year_born + "!") ;
+// // console.log(`${me.name} was born in ${me.year_born}`);
+
+// // me.what();
+
+// // console.log(`${me.name} has ${Person.arms()} arms`);
+
+// class Juggler extends Person{
+//   what(){
+//     console.log(`${this.name} is a juggler.`);
+//   }
+// }
+
+// var you = new Juggler("Masud", 1997);
 
 // me.what();
+// you.what();
 
-// console.log(`${me.name} has ${Person.arms()} arms`);
+// //----------------------------------------------------------------------
 
-class Juggler extends Person{
-  what(){
-    console.log(`${this.name} is a juggler.`);
+// class Thermostat{
+//   constructor(fahrenheit){
+//     this._fahrenheit = fahrenheit;
+//   }
+
+//   get temperature(){
+//     return (this._fahrenheit - 32) * 5/9;
+//   }
+
+//   set temperature(celsius){
+//      this._fahrenheit = (9/5 * celsius) + 32;
+//   }
+
+//   get fahrenheit(){
+//     return this._fahrenheit; 
+//   }
+// }
+
+// let thermos = new Thermostat(76);
+// console.log(thermos.temperature);
+
+// thermos.temperature = 26;
+// console.log(thermos.temperature);
+
+// console.log(thermos.fahrenheit);
+
+
+function template(strings, ...keys){
+  return function(...values){
+    let dict = values[values.length - 1] || {};
+    let results = [strings[0]];
+
+    keys.forEach(function(key,i){
+      var value = Number.isInteger(key) ? values[key] :  dict[key];
+      results.push(value,strings[i + 1]);
+    })
   }
 }
 
-var you = new Juggler("Masud", 1997);
+let t1Closure = template`${0}${1}${0}!`;
+console.log(t1Closure('Y','A'));
 
-me.what();
-you.what();
-
-//----------------------------------------------------------------------
-
-class Thermostat{
-  constructor(fahrenheit){
-    this._fahrenheit = fahrenheit;
-  }
-
-  get temperature(){
-    return (this._fahrenheit - 32) * 5/9;
-  }
-
-  set temperature(celsius){
-     this._fahrenheit = (9/5 * celsius) + 32;
-  }
-
-  get fahrenheit(){
-    return this._fahrenheit; 
-  }
-}
-
-let thermos = new Thermostat(76);
-console.log(thermos.temperature);
-
-thermos.temperature = 26;
-console.log(thermos.temperature);
-
-console.log(thermos.fahrenheit);
+let t2Closure = template`${0} ${'foo'}`;
+console.log(t2Closure('Hello', {foo: 'World'}));
