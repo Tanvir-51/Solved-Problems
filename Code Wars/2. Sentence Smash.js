@@ -21,7 +21,7 @@ function smash (words) {
   for (let i = 0; i < words.length; i++) {
     sentence += words[i];
   
-    if(i < words.length - 1){
+    if (i < words.length - 1) {
       sentence += ' '
     }
   }
