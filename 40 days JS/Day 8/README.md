@@ -22,4 +22,4 @@ return calc(a, b);
 getResult(8, 5);
 
 - Create the GEC and FEC with CP and EP flow
-  ![CP and EP flow](<CP and EP flow-2025-11-26-2139 3x.png>)
+  ![CP and EP flow](<CP and EP flow.png>)
