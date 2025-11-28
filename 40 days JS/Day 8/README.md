@@ -1,6 +1,7 @@
 1. Draw the Execution Context Diagram of the follwoing code and share as explained below:
 
 //-----------------------------------------------------//
+
 const message = "I can do it";
 
 fucntion sum(a, b) {
@@ -30,3 +31,7 @@ getResult(8, 5);
 - Create the Stack and Heap Flow
 
 ![alt text](<stack & heap flow.png>)
+
+- Create the Stack Diagram
+
+![alt text](<Stack Diagram.png>)
