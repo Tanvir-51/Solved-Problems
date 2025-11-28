@@ -48,7 +48,7 @@
 //   }
 
 //   get fahrenheit(){
-//     return this._fahrenheit; 
+//     return this._fahrenheit;
 //   }
 // }
 
@@ -65,7 +65,7 @@
 let amount = 6789;
 let rev = 0;
 
-while (amount > 0){
+while (amount > 0) {
   let digit = amount % 10;
   rev = rev * 10 + digit;
   amount = Math.floor(amount / 10);
@@ -73,14 +73,13 @@ while (amount > 0){
 
 console.log(rev);
 
-
 //------------------------------------------------------
 
 for (let i = 1; i <= 5; i++) {
-  let row = '';
+  let row = "";
 
   for (let j = 1; j <= i; j++) {
-    row += '* ';
+    row += "* ";
   }
   console.log(row);
 }

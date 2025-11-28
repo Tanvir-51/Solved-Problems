@@ -21,8 +21,6 @@
 //         console.log("Too Low! Guess again...");
 //     }
 //   }
-  
-
 
 //   const playAgainPrompt = prompt("Do you want to play again? (yes/no)")
 //   const playAgain = playAgainPrompt ? playAgainPrompt.toLowerCase() : "no"
@@ -32,16 +30,13 @@
 //   } else {
 //       console.log("Thanks for playing. See you next time!");
 //   }
-    
+
 // }
 
 // secretNumber()
 
-
-
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 10;
-
 
 function secretNumberGame() {
   console.log("Secret Number Guessing Game");
@@ -51,7 +46,7 @@ function secretNumberGame() {
   let guess = null;
   let count = 0;
 
-  while(guess !== randomNumber) {
+  while (guess !== randomNumber) {
     const userPrompt = prompt("Enter a number");
     guess = parseInt(userPrompt);
 
@@ -65,14 +60,16 @@ function secretNumberGame() {
       console.log(`It's a match!! You've succeeded in ${count} attempt`);
       break;
     } else {
-      console.log(`Invalid input! Please Enter a number between ${MIN_NUMBER} and ${MAX_NUMBER}`);
+      console.log(
+        `Invalid input! Please Enter a number between ${MIN_NUMBER} and ${MAX_NUMBER}`
+      );
     }
   }
 
-  const playAgainPrompt = prompt("Do you want to play again? (yes/no)")
-  const playAgain = playAgainPrompt ? playAgainPrompt.toLowerCase() : 'no';
+  const playAgainPrompt = prompt("Do you want to play again? (yes/no)");
+  const playAgain = playAgainPrompt ? playAgainPrompt.toLowerCase() : "no";
 
-  if(playAgain === "yes") {
+  if (playAgain === "yes") {
     secretNumberGame();
   } else {
     console.log("Thanks for playing. See you next time...");
@@ -80,15 +77,3 @@ function secretNumberGame() {
 }
 
 secretNumberGame();
-
-
-
-
-
-
-
-
-
-
-
-
