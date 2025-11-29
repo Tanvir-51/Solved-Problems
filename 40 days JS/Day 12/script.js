@@ -44,3 +44,16 @@ for (let key in profile) {
 }
 
 console.log(Object.keys(profile));
+
+let target = { p: 1, a: 2 };
+let source = { a: 3, b: 4 };
+
+Object.assign(target, source);
+// console.log(returnedObj);
+console.log(target);
+
+let obj = { name: "Tanvir" };
+// let obj2 = obj;
+let obj2 = Object.assign({}, obj);
+console.log(obj === obj2);
+console.log(obj2);
