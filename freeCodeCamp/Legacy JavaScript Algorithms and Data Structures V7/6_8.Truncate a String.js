@@ -2,21 +2,18 @@
 Truncate a string (first argument) if it is longer than the given maximum string length (second argument). Return the truncated string with a ... ending.
 */
 
+// solution 1
 function truncateString(str, num) {
-  let newStr = "";
-  let dot = "...";
-
   if (str.length <= num) {
     return str;
   } else {
-    for (let i = 1; i <= num; i++) {
-      newStr = str;
-    }
-    console.log(newStr);
-    return newStr + dot;
+    return str.slice(0, num) + "...";
   }
+}
 
-  // return str;
+// solution 2
+function truncateString(str, num) {
+  return str.length > num ? str.slice(0, num) + "..." : str;
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
