@@ -45,6 +45,8 @@ for (let key in profile) {
 
 console.log(Object.keys(profile));
 
+// ------------------------------------
+
 let target = { p: 1, a: 2 };
 let source = { a: 3, b: 4 };
 
