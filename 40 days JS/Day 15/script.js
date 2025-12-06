@@ -73,3 +73,23 @@ const emotionalVeggies = [...emotions, ...veggies];
 
 console.log(emotionalVeggies);
 console.log(...emotionalVeggies);
+
+// length
+
+const arr1 = [11, 21, 45];
+const arr2 = new Array(8);
+
+console.log(arr1.length);
+console.log(arr2.length);
+
+arr1.length = 0;
+console.log(arr1);
+
+// concat()
+
+const first1 = [1, 2, 3];
+const second2 = [4, 5, 6];
+const third = [7, 8, 9];
+
+const merge = first1.concat(second2, third);
+console.log(merge);
