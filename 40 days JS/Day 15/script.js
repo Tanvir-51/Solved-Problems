@@ -93,3 +93,64 @@ const third = [7, 8, 9];
 
 const merge = first1.concat(second2, third);
 console.log(merge);
+
+// join()
+
+const eemotions = ["😀", "😍", "😮", "🤐"];
+console.log(eemotions);
+
+const newEmotion = eemotions.join("<=>");
+console.log(newEmotion);
+
+[].join(); // return ""
+
+// fill()
+
+const colors = ["red", "blue", "green"];
+
+colors.fill("pink", 1, 3); // here, 1 is index number but 3 is length number
+console.log(colors);
+
+// includes()
+
+const names = ["tom", "bob", "alex", "tom"];
+
+console.log(names.includes("tom"));
+console.log(names.includes("julyy"));
+
+//indexOf()
+
+console.log(names.indexOf("alex"));
+console.log(names.indexOf("rob"));
+
+// lastIndexOf()
+
+console.log(names.indexOf("tom"));
+console.log(names.lastIndexOf("tom"));
+
+// reverse()
+
+const nnames = ["bob", "tom", "alex"];
+console.log(nnames.reverse());
+
+// sort()
+// the default sort() method converts the element type into strings
+// the default sorting order is ascending
+
+console.log("After default sorting:", nnames.sort());
+
+nnames.sort(function (a, b) {
+  return a === b ? 0 : a > b ? -1 : 1;
+});
+
+console.log("After using descending sort:", nnames);
+
+const ages = [2, 1000, 34, 23, 45, 10];
+
+console.log(ages.sort());
+
+console.log(
+  ages.sort(function (a, b) {
+    return a === b ? 0 : a > b ? 1 : -1;
+  })
+);
